@@ -11,12 +11,12 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             ////Part One:  Greetings statement
-            //string messageOne = "Hello World!";
-            string messageTwo = "I am Spartacus";
+            ////string messageOne = "Hello World!";
+            //string messageTwo = "I am Spartacus";
 
             ////Part Two: Set initial Spartacus attributes
             //int ageOne = 35;
-            //int ageTwo = 45;
+            //int ageTwo = 34;
             //int ageThree = 80;
             //double heightOne = 72.50;
             //double heightTwo = 91.45;
@@ -26,6 +26,13 @@ namespace HelloWorld
             //bool isGodLikeTwo = false;
             //char genderMale = 'M';
             //char genderFemale = 'F';
+            ////Part of part sixteen: method
+            //isGodLikeOne = IsGodLike(ageOne);
+            //Console.WriteLine("To say our hero is god like is " + isGodLikeOne);
+            //isGodLikeOne = IsGodLike(ageTwo);
+            //Console.WriteLine("To say our hero is god like is " + isGodLikeOne);
+            //Console.WriteLine(Reverse(messageTwo));
+
 
             ////Part Three: Display variable values
             //Console.WriteLine(messageOne);//Displays initial greeting to console
@@ -157,26 +164,26 @@ namespace HelloWorld
             //}
 
 
-            //Part Fourteen: Arrays
-            string[] foodList = new string[5];
-            foodList[0] = "Milk";
-            Console.WriteLine(foodList[0]);
-            foodList[1] = "Fruit";
-            foodList[2] = "Meat";
-            foodList[3] = "Wine";
-            foodList[4] = "Bread";
-            Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
-            int[] quantityFood = new int[5] { 1000, 100, 2000, 10000, 1500 };
+            ////Part Fourteen: Arrays
+            //string[] foodList = new string[5];
+            //foodList[0] = "Milk";
+            //Console.WriteLine(foodList[0]);
+            //foodList[1] = "Fruit";
+            //foodList[2] = "Meat";
+            //foodList[3] = "Wine";
+            //foodList[4] = "Bread";
+            //Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            //int[] quantityFood = new int[5] { 1000, 100, 2000, 10000, 1500 };
 
 
-            quantityFood[0] = 1000;
-            quantityFood[1] = 100;
-            quantityFood[2] = 2000;
-            quantityFood[3] = 10000;
-            quantityFood[4] = 1500;
-            Console.WriteLine("{0}, {1}, {2}, {3}, {4}", quantityFood[0], quantityFood[1], quantityFood[2], quantityFood[3], quantityFood[4]);
-            Console.WriteLine(foodList[0] + ": " + quantityFood[0] + ", " + foodList[1] + ": " + quantityFood[1] + ", " + foodList[2] + ": " + quantityFood[2] + ", " + foodList[3] + ": " + quantityFood[3] + ", " + foodList[4] + ": " + quantityFood[4]);
-            Console.WriteLine(foodList.Length);
+            //quantityFood[0] = 1000;
+            //quantityFood[1] = 100;
+            //quantityFood[2] = 2000;
+            //quantityFood[3] = 10000;
+            //quantityFood[4] = 1500;
+            //Console.WriteLine("{0}, {1}, {2}, {3}, {4}", quantityFood[0], quantityFood[1], quantityFood[2], quantityFood[3], quantityFood[4]);
+            //Console.WriteLine(foodList[0] + ": " + quantityFood[0] + ", " + foodList[1] + ": " + quantityFood[1] + ", " + foodList[2] + ": " + quantityFood[2] + ", " + foodList[3] + ": " + quantityFood[3] + ", " + foodList[4] + ": " + quantityFood[4]);
+            //Console.WriteLine(foodList.Length);
 
             //string[] elements = messageTwo.Split(' ');
             //Console.WriteLine(elements[0]);
@@ -259,19 +266,77 @@ namespace HelloWorld
             //} while (action != "exit");
 
 
-            //For Loops:
+            ////For Loops:
 
 
-            for(int i = 0; i < quantityFood.Length; i++)
+            //for(int i = 0; i < quantityFood.Length; i++)
+            //{
+            //    Console.WriteLine(quantityFood[i]);
+            //}
+
+            //for (int i = 0; i < quantityFood.Length; i++)
+            //{
+            //    Console.WriteLine("Please enter the amount of " + foodList[i] + ": ");
+            //    quantityFood[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //Loop Practice:  Write a program to read 10 numbers from keyboard and find their sum & average:
+
+
+            ////Nested loop example:
+
+            //int size = 5;
+            //int i, k;
+            //for (i = 0; i <= size; i++)
+            //{
+            //    for (k = 0; k < i; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine("");
+            //}
+
+            //Random number generator:
+            Random r = new Random();
+            int[] rArray = new int[25];
+
+            for(int i=0; i < rArray.Length; i ++)
             {
-                Console.WriteLine(quantityFood[i]);
+                rArray[i] = r.Next(0, 100);
+                Console.WriteLine(rArray[i]);
             }
+        
 
-            for (int i = 0; i < quantityFood.Length; i++)
-            {
-                Console.WriteLine("Please enter the amount of " + foodList[i] + ": ");
-                quantityFood[i] = int.Parse(Console.ReadLine());
-            }
+
         }
+        ////Part Sixteen: Method Example
+        //static bool IsGodLike(int age)
+        //{
+        //    bool status;
+        //    if (age % 2 == 0)
+        //    {
+        //        status = false;
+        //    }
+        //    else
+        //    {
+        //        status = true;
+        //    }
+        //    return status;
+        //}
+        ////String method:
+        //static string Reverse(string text)
+        //{
+        //    char[] cArray = text.ToCharArray();
+        //    string reverse = " ";
+        //    for (int i = cArray.Length - 1; i > -1; i--)
+        //    {
+        //        reverse += cArray[i];
+        //    }
+        //    return reverse;
+        //}
+
     }
-}
+ }
+
+
+
